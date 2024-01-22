@@ -349,7 +349,10 @@
             </svg></a>
     </div>
 
-    <script>
+    <script type="module">
+        import { cambiarColorNegro } from './colorModule.js';
+        import { parrafo } from './textModule.js';
+    
         const btnNegro = document.getElementById('botonNegro');
         const div2 = document.getElementById('div2');
         const div3 = document.getElementById('div3');
@@ -357,50 +360,15 @@
         const BottomTitle = document.getElementById('BottomTitle');
         const BottomSubtitle = document.querySelectorAll('.BottomSubtitle');
         const body = document.body;
-
-        const cambiarColorNegro = () => {
-            const computedStyleDiv2 = getComputedStyle(div2);
-            if (computedStyleDiv2.backgroundColor === "rgb(119, 126, 120)") {
-                div2.style.backgroundColor = "white";
-                div3.style.backgroundColor = "white";
-                BottomBox.style.backgroundColor = "white";
-                BottomTitle.style.color = "black";
-                body.style.backgroundImage = 'url("FondoDePantalla2.jpg")';
-                BottomSubtitle.forEach(subtitle => {
-                    subtitle.style.color = "black";
-                });
-            } else {
-                div2.style.backgroundColor = "#777E78";
-                div3.style.backgroundColor = "#898A80";
-                BottomBox.style.backgroundColor = "#252B2B";
-                BottomTitle.style.color = "#898A80";
-                body.style.backgroundImage = 'url("FondoDePantalla.jpg")';
-                BottomSubtitle.forEach(subtitle => {
-                    subtitle.style.color = "#898A80";
-                });
-            }
-        }
-
-        btnNegro.addEventListener('click', cambiarColorNegro);
-    </script>
-    <script>
-        // Crear el objeto parrafo
-        var parrafo = {
-            texto: 'Carti comenzó a rapear a una edad temprana bajo el nombre de $ir Cartier y poco después lo cambió a Playboi Carti. Gran parte de su trabajo inicial ha sido eliminado de Internet. En 2015 en un show en SXSW, Carti conoció a A$AP Rocky, quien fue mentor de Carti. Luego comenzó a llamar la atención en 2015 con sus singles "Broke Boi" y "Fetti" con Da$h y Maxo Kream, ambos publicados en SoundCloud. Alrededor de este tiempo, Carti colaboró con frecuencia con artistas en la escena de rap underground de Atlanta, incluido su primo UnoTheActivist, ThouxanbanFauni, Yung Bans, Lil Yachty, Ethereal y los productores Mexikodro e ICYTWAT. Además, comenzó a hacer una gira con A$AP Ferg y Lil Uzi Vert y firmó un acuerdo con Interscope Records. Una vez que Carti decidió dedicarse a la música a tiempo completo, tomó la decisión de mudarse a la ciudad de Nueva York con algunos familiares. Mientras estaba en la ciudad de Nueva York, Carti se quedó en la casa de su traficante de drogas, y los miembros de ASAP Mob frecuentaban la casa. Carti decidió ir a Texas con ASAP Rocky. En 2016, apareció en el sencillo "Telephone Calls" de A$AP Mob de su álbum Cozy Tapes Vol. 1: Friends. El mismo año, Carti firmó con AWGE, de A$AP Mob, y con Interscope Records.',
-            texto1: 'Carti lanzó su mixtape debut homónimo en abril de 2017. El lanzamiento llamó la atención de varias publicaciones musicales, incluyendo XXL, Pitchfork, Spin, HotNewHipHop, y PopMatters, y alcanzó el número 12 en el Billboard 200. El mixtape generó dos singles exitosos: «Magnolia», que alcanzó el número 29 en el Billboard Hot 100, y «wokeuplikethis» con Lil Uzi Vert, que alcanzó el número 76. Acompañando el lanzamiento del mixtape, Carti se embarcó en una gira con Gucci Mane y Dreezy. Apareció en el álbum de DJ Mustard y apareció en su sencillo «Baguettes in the Face» con NAV y A Boogie wit da Hoodie. El 13 de junio de 2017, Playboi Carti fue nombrado como una de los diez de la «Clase Freshman 2017» de XXL. Alrededor de este tiempo, apareció en el sencillo «Raf» de A$AP Mob de su álbum Cozy Tapes Vol. 2: El sencillo «Summer Bummer» de Too Cosy y Lana del Rey de su álbum Lust For Life. En mayo de 2018, Carti lanzó su álbum de estudio debut de larga duración Die Lit, debutando en el número tres en la lista Billboard 200 de EE. UU., ganando 61,000 unidades equivalentes a álbumes (incluidas 5,000 copias como ventas puras de álbumes) en su primera semana. Meses después, en agosto de 2018, Carti anunció su segundo álbum de estudio Whole Lotta Red, que sería lanzado 2 años después. Carti comenzó a trabajar en su próximo álbum Whole Lotta Red a fines de 2018. Durante los dos años siguientes, muchas de las canciones de Carti se filtraron a Internet y acumularon decenas de millones de reproducciones. No lanzó ninguna canción propio, sino que apareció en numerosos sencillos, incluidos «Baguettes in the Face» con NAV y A Boogie wit da Hoodie del álbum de DJ Mustard y «Earfquake» de Tyler the Creator. En abril de 2020, Carti lanzó su primera canción nueva desde 2018 "@ MEH", que alcanzó el puesto 35 en el Hot 100. Al mes siguiente, apareció en el sencillo «Pain 1993» de Drake, que debutó en el número 7 en el Billboard Hot 100 y se convirtió en el primer top diez de Carti en la lista. El 23 de noviembre de 2020, Carti anunció que Whole Lotta Red estaba completo y se había enviado a su sello. El 26 de noviembre de 2020, Carti apareció en el álbum de lujo de Lil Yachty «Lil Boat 3.5» en la canción «Flex Up» con Future. Carti confirmó la fecha de lanzamiento de Whole Lotta Red para el 25 de diciembre de 2020',
-            texto2: 'En junio de 2021, Carti apareció en la canción «Switching Lanes» del rapero y productor Pierre Bourne de su álbum The Life Of Pierre 5 y en el sencillo del rapero Lil 1 Dte, «Homixide» de su mixtape homónimo. En agosto de 2021, Playboi Carti apareció en la canción «Unlock It» de ABRA y en las canciones «Off the Grid», «Junya» y «Junya, Pt. 2» en el décimo álbum de estudio de Kanye West, Donda (2021).El 25 de diciembre de 2022, Carti regresó a Twitter después de más de un año, haciendo tuits, con un «Hola Twitter» y «amo a todos mis seguidores, es hora», posiblemente insinuando otro lanzamiento el día de Navidad similar a su segundo álbum de estudio, Whole Lotta Red en 2020. El 3 de marzo de 2023, Carti comenzó el primer día de Rolling Loud California. Durante el set interpretó un tema inédito «Rockstar», que se espera que esté en su próximo álbum. El 28 de mayo de 2023, Carti regresó a Instagram desde su arresto en diciembre de 2022 publicando una captura de pantalla de él y The Weeknd en FaceTime en su historia de Instagram. Tres días después, el 31 de mayo de 2023, The Weeknd acudió a las redes sociales para burlarse de la canción de colaboración «Popular» con Carti y Madonna, y anunció que se lanzaría el 2 de junio de 2023 como sencillo de su álbum de banda sonora cancelado The Idol Vol. 1, para su serie de televisión The Idol. El 12 de junio de 2023, Carti publicó una foto de YoungBoy Never Broke Again con la cadena cruzada invertida característica de Opium en una historia de Instagram. Más tarde, una publicación en Instagram de Jewelry Unlimited anunció que ambos están trabajando en un álbum de colaboración titulado 004KT. El 12 de junio, F1lthy, quien es un productor frecuente de Opium, tuiteó «004KT», avivando aún más los rumores de un álbum de colaboración. El 7 de julio de 2023, Carti interpretó una nueva canción «Pop Out» en el Wireless Festival que se espera que esté en su próximo álbum Music. El 12 de julio de 2023, Carti confirmó en su historia de Instagram que estará de gira con los artistas de su sello Ken Carson, Destroy Lonely, y Homixide Gang, que luego se pospondría hasta 2024. El 28 de julio de 2023, Carti apareció en el esperado cuarto álbum de estudio de Travis Scott, Utopia, en la 8ª canción «Fe!n». Al día siguiente, Carti publicó en su historia de Instagram rapeando su verso de la canción, y habló sobre su próximo y esperado tercer álbum de estudio, afirmando «Nueva mierda en camino, créanlo». El 7 de diciembre de 2023, Carti publicó «I am music» en su historia de Instagram. A esto le siguió otra historia que mostraba un tweet de Pharrell Williams en respuesta a la publicación original de Carti, en el que Williams escribía sólo la palabra «Preparar». Ese mismo día, DJ Akademiks compartió que Carti tiene previsto lanzar su álbum en enero de 2024 y dijo que «será lo mejor que jamás hayas escuchado». Carti confirmó la fecha de lanzamiento de 2024 el 8 de diciembre, publicando una historia de Instagram que decía «2024», acompañada de un fragmento de una supuesta canción que presentaba la etiqueta de DJ Swamp Izzo, un DJ de Atlanta que trabajó extensamente con Young Thug. Más tarde, ese mismo día, Carti lanzó «Different Day» exclusivamente en su cuenta secundaria de Instagram. El 14 de diciembre, Carti lanzó la canción «2024» en su canal de YouTube, insinuando nuevamente una fecha de lanzamiento de 2024. La canción fue producida por Kanye West, Ojivolta y Earl on the Beat. El 19 de diciembre, Carti lanzó «H00dByAir» en Instagram, una canción que confirmaba que tiene una hija, Yves. El 1 de enero, Carti publicaría un vídeo del músico experimental Blackhaine en su historia de Instagram (como hizo con temas anteriores) indicando que Carti lanzaría una canción ese día. Más tarde, ese mismo día, Carti lanzó «Backr00ms», una canción con Travis Scott, exclusivamente en su canal de YouTube.'
-        };
-
-        // Obtener el contenedor HTML donde se mostrará el texto
-        var contenedor = document.getElementById('parrafoContainer');
-        var contenedor1 = document.getElementById('parrafoContainer1');
-        var contenedor2 = document.getElementById('parrafoContainer2');
-
-        // Mostrar el texto en el HTML
+        const contenedor = document.getElementById('parrafoContainer');
+        const contenedor1 = document.getElementById('parrafoContainer1');
+        const contenedor2 = document.getElementById('parrafoContainer2');
+    
+        btnNegro.addEventListener('click', () => cambiarColorNegro(div2, div3, BottomBox, BottomTitle, BottomSubtitle, body));
+    
         contenedor.textContent = parrafo.texto;
         contenedor1.textContent = parrafo.texto1;
         contenedor2.textContent = parrafo.texto2;
-
     </script>
 
 
