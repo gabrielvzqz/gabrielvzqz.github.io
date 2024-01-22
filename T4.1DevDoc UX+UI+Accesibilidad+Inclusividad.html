@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-image: url('FondoDePantalla.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #div1 {
+            background-image: url('cartiwallpaper1.jpg');
+            background-color: #898A80;
+            margin: 5vw;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            margin-top: 15vh;
+            margin-bottom: 10vh;
+            padding-left: 30px;
+            font-family: 'sans-serif', ;
+            font-weight: bold;
+            width: 58vw;
+            height: 60vh;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            color: #898A80;
+            padding-top: 10px;
+        }
+
+
+        #div2 {
+            margin: 5vw;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 0vh;
+            margin-bottom: 15vh;
+            width: 60vw;
+            background-color: #777E78;
+            border-radius: 15px;
+        }
+
+        #div3 {
+            position: fixed;
+            margin-top: -76vh;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 22vw;
+            background-color: #898A80;
+            margin-left: 78vw;
+            height: 100vh;
+        }
+
+        #HeadboardBox {
+            color: #898A80;
+            position: fixed;
+            width: 100vw;
+            height: 11vh;
+            margin: 0;
+            background-color: #252B2B;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            top: 0;
+            left: 0;
+        }
+
+        #BottomBox {
+            color: #898A80;
+            width: 100vw;
+            height: 10vh;
+            margin: 0;
+            background-color: #252B2B;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            top: auto;
+            bottom: 0;
+            left: 0;
+        }
+
+        button {
+            background-color: #252B2B;
+            font-size: 16px;
+            padding: 15px 32x;
+            margin-right: 40px;
+            margin-left: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #HeadboardTitle {
+            font-size: 30px;
+            margin-left: 35px;
+            margin-right: auto;
+            justify-content: left;
+        }
+
+        .HeadboardSubtitle {
+            font-size: 20px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #BottomTitle {
+            font-size: 20px;
+            margin-left: 35px;
+            margin-right: auto;
+            justify-content: left;
+        }
+
+        .BottomSubtitle {
+            font-size: 15px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        a {
+            color: #898A80;
+            text-decoration: none;
+        }
+
+        .Titulos {
+            font-size: 30px;
+            margin-top: 40px;
+            margin-bottom: 0px;
+            justify-content: left;
+        }
+
+        .TitulosDiv3 {
+            font-size: 20px;
+            margin-top: auto;
+            justify-content: left;
+            padding-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .Parrafos {
+            margin-left: 35px;
+            margin-right: 35px;
+            justify-content: center;
+        }
+
+        svg {
+            margin-left: 10px;
+            margin-right: 35px;
+        }
+
+        .bi-github {
+            padding-right: 40px;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            #div2 {
+                order: 2;
+            }
+
+            #div3 {
+                order: 1;
+                position: relative;
+                margin-top: 0;
+                margin-left: 0;
+                width: 100%;
+            }
+
+            #HeadboardBox {
+                flex-direction: column;
+            }
+
+            .HeadboardSubtitle {
+                display: none;
+            }
+
+            #menuIcon {
+                display: block;
+            }
+
+            #menuLinks {
+                display: none;
+                flex-direction: column;
+            }
+        }
+
+        /* Estilos adicionales para el menú hamburguesa */
+        #menuIcon {
+            cursor: pointer;
+            margin-left: auto;
+            padding: 10px;
+        }
+
+        #menuLinks {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #menuLinks a {
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div id="div1">
+            <h2>Trayectoria</h2>
+                <p><a href="#2011-2016" class="active">2011-2016</a></p>
+                <p><a href="#2017-2020" class="active">2017-2020</a></p>
+                <p><a href="#2021-Actualidad" class="active">2021-Actualidad</a></p>
+        </div>
+    </nav>
+    <div class="grid-container">
+        <div id="div2">
+            <section id="2011-2016">
+                <div>
+                    <h1 class="Titulos">2011-2016: inicios</h1><br>
+                    <p id="parrafoContainer" class="Parrafos">
+                    </p>
+                </div>
+            </section>
+            <section id="2017-2020">
+                <div>
+
+                    <h1 class="Titulos">2017-2020: Playboi Carti, Die Lit, y Whole Lotta Red</h1><br>
+                    <p id="parrafoContainer1" class="Parrafos"></p>
+                </div>
+            </section>
+            <section id="2021-Actualidad">
+                <div>
+
+                    <h1 class="Titulos">2021-presente: Próximo álbum</h1><br>
+                    <p id="parrafoContainer2" class="Parrafos">
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div id="div3">
+            <div>
+                <h1 class="TitulosDiv3">In Abundance</h1>
+                <a href="https://open.spotify.com/intl-es/album/5oMLrgmPNs35zhR38X6ET4" target="_blank">
+                    <img src="InAbundance.jpg" width="140" height="140" alt="Descripción de la imagen">
+                </a><br>
+                <h1 class="TitulosDiv3">Playboi Carti</h1>
+                <a href="https://open.spotify.com/intl-es/album/4rJgzzfFHAVFhCSt2P4I3j" target="_blank">
+                    <img src="PlayboiCarti.jpg" width="140" height="140" alt="Descripción de la imagen">
+                </a><br>
+                <h1 class="TitulosDiv3">Die Lit</h1>
+                <a href="https://open.spotify.com/intl-es/album/7dAm8ShwJLFm9SaJ6Yc58O" target="_blank">
+                    <img src="DieLit.jpg" width="140" height="140" alt="Descripción de la imagen">
+                </a><br>
+                <h1 class="TitulosDiv3">Whole Lotta Red</h1>
+                <a href="https://open.spotify.com/intl-es/album/2QRedhP5RmKJiJ1i8VgDGR" target="_blank">
+                    <img src="WholeLottaRed.jpg" width="140" height="140" alt="Descripción de la imagen">
+                </a><br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div id="HeadboardBox">
+        <h1 id="HeadboardTitle">Playboi Carti</h1>
+        <a href="https://open.spotify.com/intl-es/artist/699OTQXzgjhIYAHMy9RyPD" target="_blank">
+            <h2 class="HeadboardSubtitle">Spotify</h2>
+        </a>
+        <a href="https://open.spotify.com/intl-es/artist/699OTQXzgjhIYAHMy9RyPD" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-spotify"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288" />
+            </svg></a>
+        <a href="https://www.youtube.com/@playboicarti" target="_blank">
+            <h2 class="HeadboardSubtitle">YouTube</h2>
+        </a>
+        <a href="https://www.youtube.com/@playboicarti" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-youtube"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+            </svg></a>
+        <a href="https://www.instagram.com/playboicarti/" target="_blank">
+            <h2 class="HeadboardSubtitle">Instagram</h2>
+        </a>
+        <a href="https://www.instagram.com/playboicarti/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-instagram"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg></a>
+        <button class="HeadboardSubtitle" id="botonNegro">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16" fill="#898A80">
+                <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8m.5-9.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707" />
+            </svg>
+            </a> </button>
+    </div>
+    <div id="BottomBox">
+        <h1 id="BottomTitle">Gabriel Vázquez Hermida</h1>
+        <h2 class="BottomSubtitle">+34 666 66 66 66</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-telephone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <h2 class="BottomSubtitle">gabrielvazquez.hermida@gmail.com</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-envelope"
+            viewBox="0 0 16 16">
+            <path
+                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+        </svg>
+        <a href="https://github.com/gabrielvzqz" target="_blank">
+            <h2 class="BottomSubtitle">GitHub</h2>
+        </a>
+        <a href="https://github.com/gabrielvzqz" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black" class="bi bi-github"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+            </svg></a>
+    </div>
+
+    <script>
+        const btnNegro = document.getElementById('botonNegro');
+        const div2 = document.getElementById('div2');
+        const div3 = document.getElementById('div3');
+        const BottomBox = document.getElementById('BottomBox');
+        const BottomTitle = document.getElementById('BottomTitle');
+        const BottomSubtitle = document.querySelectorAll('.BottomSubtitle');
+        const body = document.body;
+
+        const cambiarColorNegro = () => {
+            const computedStyleDiv2 = getComputedStyle(div2);
+            if (computedStyleDiv2.backgroundColor === "rgb(119, 126, 120)") {
+                div2.style.backgroundColor = "white";
+                div3.style.backgroundColor = "white";
+                BottomBox.style.backgroundColor = "white";
+                BottomTitle.style.color = "black";
+                body.style.backgroundImage = 'url("FondoDePantalla2.jpg")';
+                BottomSubtitle.forEach(subtitle => {
+                    subtitle.style.color = "black";
+                });
+            } else {
+                div2.style.backgroundColor = "#777E78";
+                div3.style.backgroundColor = "#898A80";
+                BottomBox.style.backgroundColor = "#252B2B";
+                BottomTitle.style.color = "#898A80";
+                body.style.backgroundImage = 'url("FondoDePantalla.jpg")';
+                BottomSubtitle.forEach(subtitle => {
+                    subtitle.style.color = "#898A80";
+                });
+            }
+        }
+
+        btnNegro.addEventListener('click', cambiarColorNegro);
+    </script>
+    <script>
+        // Crear el objeto parrafo
+        var parrafo = {
+            texto: 'Carti comenzó a rapear a una edad temprana bajo el nombre de $ir Cartier y poco después lo cambió a Playboi Carti. Gran parte de su trabajo inicial ha sido eliminado de Internet. En 2015 en un show en SXSW, Carti conoció a A$AP Rocky, quien fue mentor de Carti. Luego comenzó a llamar la atención en 2015 con sus singles "Broke Boi" y "Fetti" con Da$h y Maxo Kream, ambos publicados en SoundCloud. Alrededor de este tiempo, Carti colaboró con frecuencia con artistas en la escena de rap underground de Atlanta, incluido su primo UnoTheActivist, ThouxanbanFauni, Yung Bans, Lil Yachty, Ethereal y los productores Mexikodro e ICYTWAT. Además, comenzó a hacer una gira con A$AP Ferg y Lil Uzi Vert y firmó un acuerdo con Interscope Records. Una vez que Carti decidió dedicarse a la música a tiempo completo, tomó la decisión de mudarse a la ciudad de Nueva York con algunos familiares. Mientras estaba en la ciudad de Nueva York, Carti se quedó en la casa de su traficante de drogas, y los miembros de ASAP Mob frecuentaban la casa. Carti decidió ir a Texas con ASAP Rocky. En 2016, apareció en el sencillo "Telephone Calls" de A$AP Mob de su álbum Cozy Tapes Vol. 1: Friends. El mismo año, Carti firmó con AWGE, de A$AP Mob, y con Interscope Records.',
+            texto1: 'Carti lanzó su mixtape debut homónimo en abril de 2017. El lanzamiento llamó la atención de varias publicaciones musicales, incluyendo XXL, Pitchfork, Spin, HotNewHipHop, y PopMatters, y alcanzó el número 12 en el Billboard 200. El mixtape generó dos singles exitosos: «Magnolia», que alcanzó el número 29 en el Billboard Hot 100, y «wokeuplikethis» con Lil Uzi Vert, que alcanzó el número 76. Acompañando el lanzamiento del mixtape, Carti se embarcó en una gira con Gucci Mane y Dreezy. Apareció en el álbum de DJ Mustard y apareció en su sencillo «Baguettes in the Face» con NAV y A Boogie wit da Hoodie. El 13 de junio de 2017, Playboi Carti fue nombrado como una de los diez de la «Clase Freshman 2017» de XXL. Alrededor de este tiempo, apareció en el sencillo «Raf» de A$AP Mob de su álbum Cozy Tapes Vol. 2: El sencillo «Summer Bummer» de Too Cosy y Lana del Rey de su álbum Lust For Life. En mayo de 2018, Carti lanzó su álbum de estudio debut de larga duración Die Lit, debutando en el número tres en la lista Billboard 200 de EE. UU., ganando 61,000 unidades equivalentes a álbumes (incluidas 5,000 copias como ventas puras de álbumes) en su primera semana. Meses después, en agosto de 2018, Carti anunció su segundo álbum de estudio Whole Lotta Red, que sería lanzado 2 años después. Carti comenzó a trabajar en su próximo álbum Whole Lotta Red a fines de 2018. Durante los dos años siguientes, muchas de las canciones de Carti se filtraron a Internet y acumularon decenas de millones de reproducciones. No lanzó ninguna canción propio, sino que apareció en numerosos sencillos, incluidos «Baguettes in the Face» con NAV y A Boogie wit da Hoodie del álbum de DJ Mustard y «Earfquake» de Tyler the Creator. En abril de 2020, Carti lanzó su primera canción nueva desde 2018 "@ MEH", que alcanzó el puesto 35 en el Hot 100. Al mes siguiente, apareció en el sencillo «Pain 1993» de Drake, que debutó en el número 7 en el Billboard Hot 100 y se convirtió en el primer top diez de Carti en la lista. El 23 de noviembre de 2020, Carti anunció que Whole Lotta Red estaba completo y se había enviado a su sello. El 26 de noviembre de 2020, Carti apareció en el álbum de lujo de Lil Yachty «Lil Boat 3.5» en la canción «Flex Up» con Future. Carti confirmó la fecha de lanzamiento de Whole Lotta Red para el 25 de diciembre de 2020',
+            texto2: 'En junio de 2021, Carti apareció en la canción «Switching Lanes» del rapero y productor Pierre Bourne de su álbum The Life Of Pierre 5 y en el sencillo del rapero Lil 1 Dte, «Homixide» de su mixtape homónimo. En agosto de 2021, Playboi Carti apareció en la canción «Unlock It» de ABRA y en las canciones «Off the Grid», «Junya» y «Junya, Pt. 2» en el décimo álbum de estudio de Kanye West, Donda (2021).El 25 de diciembre de 2022, Carti regresó a Twitter después de más de un año, haciendo tuits, con un «Hola Twitter» y «amo a todos mis seguidores, es hora», posiblemente insinuando otro lanzamiento el día de Navidad similar a su segundo álbum de estudio, Whole Lotta Red en 2020. El 3 de marzo de 2023, Carti comenzó el primer día de Rolling Loud California. Durante el set interpretó un tema inédito «Rockstar», que se espera que esté en su próximo álbum. El 28 de mayo de 2023, Carti regresó a Instagram desde su arresto en diciembre de 2022 publicando una captura de pantalla de él y The Weeknd en FaceTime en su historia de Instagram. Tres días después, el 31 de mayo de 2023, The Weeknd acudió a las redes sociales para burlarse de la canción de colaboración «Popular» con Carti y Madonna, y anunció que se lanzaría el 2 de junio de 2023 como sencillo de su álbum de banda sonora cancelado The Idol Vol. 1, para su serie de televisión The Idol. El 12 de junio de 2023, Carti publicó una foto de YoungBoy Never Broke Again con la cadena cruzada invertida característica de Opium en una historia de Instagram. Más tarde, una publicación en Instagram de Jewelry Unlimited anunció que ambos están trabajando en un álbum de colaboración titulado 004KT. El 12 de junio, F1lthy, quien es un productor frecuente de Opium, tuiteó «004KT», avivando aún más los rumores de un álbum de colaboración. El 7 de julio de 2023, Carti interpretó una nueva canción «Pop Out» en el Wireless Festival que se espera que esté en su próximo álbum Music. El 12 de julio de 2023, Carti confirmó en su historia de Instagram que estará de gira con los artistas de su sello Ken Carson, Destroy Lonely, y Homixide Gang, que luego se pospondría hasta 2024. El 28 de julio de 2023, Carti apareció en el esperado cuarto álbum de estudio de Travis Scott, Utopia, en la 8ª canción «Fe!n». Al día siguiente, Carti publicó en su historia de Instagram rapeando su verso de la canción, y habló sobre su próximo y esperado tercer álbum de estudio, afirmando «Nueva mierda en camino, créanlo». El 7 de diciembre de 2023, Carti publicó «I am music» en su historia de Instagram. A esto le siguió otra historia que mostraba un tweet de Pharrell Williams en respuesta a la publicación original de Carti, en el que Williams escribía sólo la palabra «Preparar». Ese mismo día, DJ Akademiks compartió que Carti tiene previsto lanzar su álbum en enero de 2024 y dijo que «será lo mejor que jamás hayas escuchado». Carti confirmó la fecha de lanzamiento de 2024 el 8 de diciembre, publicando una historia de Instagram que decía «2024», acompañada de un fragmento de una supuesta canción que presentaba la etiqueta de DJ Swamp Izzo, un DJ de Atlanta que trabajó extensamente con Young Thug. Más tarde, ese mismo día, Carti lanzó «Different Day» exclusivamente en su cuenta secundaria de Instagram. El 14 de diciembre, Carti lanzó la canción «2024» en su canal de YouTube, insinuando nuevamente una fecha de lanzamiento de 2024. La canción fue producida por Kanye West, Ojivolta y Earl on the Beat. El 19 de diciembre, Carti lanzó «H00dByAir» en Instagram, una canción que confirmaba que tiene una hija, Yves. El 1 de enero, Carti publicaría un vídeo del músico experimental Blackhaine en su historia de Instagram (como hizo con temas anteriores) indicando que Carti lanzaría una canción ese día. Más tarde, ese mismo día, Carti lanzó «Backr00ms», una canción con Travis Scott, exclusivamente en su canal de YouTube.'
+        };
+
+        // Obtener el contenedor HTML donde se mostrará el texto
+        var contenedor = document.getElementById('parrafoContainer');
+        var contenedor1 = document.getElementById('parrafoContainer1');
+        var contenedor2 = document.getElementById('parrafoContainer2');
+
+        // Mostrar el texto en el HTML
+        contenedor.textContent = parrafo.texto;
+        contenedor1.textContent = parrafo.texto1;
+        contenedor2.textContent = parrafo.texto2;
+
+    </script>
+
+
+
+</body>
+
+</html>
